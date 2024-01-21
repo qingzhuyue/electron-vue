@@ -1,0 +1,60 @@
+{
+  "name": "duxinyues",
+  "private": true,
+  "version": "0.0.1",
+  "main": "dist-electron/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "rimraf dist-electron vue-tsc && vite build",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"yarn dev\" && \"electron .\"",
+    "electron:build": "yarn build && electron-builder"
+  },
+  "build": {
+    "appId": "ink.bennent_g.demo",
+    "directories": {
+      "output": "release"
+    },
+    "nsis": {
+      "oneClick": true,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./assets/vue.svg",
+      "uninstallerIcon": "./assets/vue.svg",
+      "installerHeaderIcon": "./assets/vue.svg",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "读心悦"
+    }
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "^5.1.12",
+    "ant-design-vue": "^4.0.1",
+    "axios": "^1.4.0",
+    "concurrently": "^8.2.0",
+    "dayjs": "^1.11.10",
+    "scss": "^0.2.4",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.1",
+    "vite-plugin-imp": "^2.4.0",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "electron": "^25.3.2",
+    "electron-builder": "^24.6.3",
+    "electron-devtools-installer": "^3.2.0",
+    "sass": "^1.65.1",
+    "sass-loader": "^13.3.2",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-components": "^0.13.3",
+    "vite-plugin-electron": "^0.12.0",
+    "vite-plugin-electron-renderer": "^0.14.5",
+    "vue-tsc": "^1.8.5"
+  }
+}
