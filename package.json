@@ -36,6 +36,7 @@
     "concurrently": "^8.2.0",
     "dayjs": "^1.11.10",
     "scss": "^0.2.4",
+    "three": "^0.163.0",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-vue-components": "^0.25.1",
     "vite-plugin-imp": "^2.4.0",
